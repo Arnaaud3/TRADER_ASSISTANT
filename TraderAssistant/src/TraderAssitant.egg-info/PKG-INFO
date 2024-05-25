@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: TraderAssitant
+Version: 0.0.1
+Summary: Package that provide an assistant tool for retails traders.
+Author-email: Arnaud TECHER <techer.arnaud@orange.fr>
+Project-URL: Homepage, https://github.com/Arnaaud3/TraderAssistant
+Project-URL: Issues, https://github.com/Arnaaud3/TraderAssistant/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE

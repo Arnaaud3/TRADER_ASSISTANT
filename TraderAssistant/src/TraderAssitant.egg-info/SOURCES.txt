@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/TraderAssitant.egg-info/PKG-INFO
+src/TraderAssitant.egg-info/SOURCES.txt
+src/TraderAssitant.egg-info/dependency_links.txt
+src/TraderAssitant.egg-info/top_level.txt
+src/analysis_market_data/__init__.py
+src/analysis_market_data/pattern_detection.py
+src/analysis_market_data/signal_analysis.py
+src/graphic_interface/__init__.py
+src/graphic_interface/main_interface.py
+src/stock_market_data/__init__.py
+src/stock_market_data/direct_market_data.py
+src/stock_market_data/historical_market_data.py
+src/stock_market_data/preprocess_market_data.py
