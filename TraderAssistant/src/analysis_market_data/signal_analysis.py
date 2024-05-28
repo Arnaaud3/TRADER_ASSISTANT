@@ -1,5 +1,5 @@
 import pandas as pd
-from src.stock_market_data import historical_market_data
+from stock_market_data import historical_market_data
 
 class Signal_analysis:
     
@@ -15,4 +15,3 @@ class Signal_analysis:
         
 if __name__ == "__main__":
     print("hello")
-    # analysis = Signal_analysis()

@@ -1,4 +1,4 @@
-import historical_market_data as hmd
+from stock_market_data import historical_market_data as hmd
 from mplfinance.plotting import plot
 import pandas as pd 
 
