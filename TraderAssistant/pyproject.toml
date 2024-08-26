@@ -1,0 +1,17 @@
+[project]
+name = "TraderAssitant"
+version = "0.0.1"
+authors = [
+  { name="Arnaud TECHER", email="techer.arnaud@orange.fr" },
+]
+description = "Package that provide an assistant tool for retails traders."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Arnaaud3/TraderAssistant"
+Issues = "https://github.com/Arnaaud3/TraderAssistant/issues"
