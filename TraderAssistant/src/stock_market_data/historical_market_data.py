@@ -5,6 +5,8 @@ import os
 
 
 class Historical_market_data:
+    """Class to retrieve historical data on a market.
+    """
     
     CURRENT_DATE = datetime.datetime.now()
     STARTING_YEAR_RECORD_MARKET_DATA = 2015
@@ -36,14 +38,14 @@ class Historical_market_data:
             for year in range(self.STARTING_YEAR_RECORD_MARKET_DATA,self.CURRENT_DATE.year):
                 start = f"{year}-01-01"
                 end = f"{year}-12-31"
-                market_data_list.append(yf.download(self.marketName, start=start, end=end, interval=self.timeInterval))
-            try:
-                market_data_list.append(yf.download(self.marketName, start=start, end=end, interval=self.timeInterval))
-            except Exception as e:
-                print(f"Error downloading data for {year}: {e}")
+                # market_data_list.append(yf.download(self.marketName, start=start, end=end, interval=self.timeInterval))
+                try:
+                    market_data_list.append(yf.download(self.marketName, start=start, end=end, interval=self.timeInterval))
+                except Exception as e:
+                    print(f"Error downloading data for {year}: {e}")
             start = f"{self.CURRENT_DATE.year}-01-01"
             end = f"{self.CURRENT_DATE.year}-{self.CURRENT_DATE.month}-{self.CURRENT_DATE.day}"
-            market_data_list.append(yf.download(self.marketName,start=start,end=end,interval=self.timeInterval))
+            # market_data_list.append(yf.download(self.marketName,start=start,end=end,interval=self.timeInterval))
             try:
                 market_data_list.append(yf.download(self.marketName, start=start, end=end, interval=self.timeInterval))
             except Exception as e:
@@ -64,4 +66,3 @@ class Historical_market_data:
     
 if __name__ == "__main__":
     data = Historical_market_data("BTC-USD","1d").marketData
-    
