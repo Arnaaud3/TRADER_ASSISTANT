@@ -57,8 +57,8 @@ class Pattern_detection:
 
 if __name__ == "__main__":
     data = hmd.Historical_market_data("BTC-USD","1d")
-    preprocess_datas = pmd.Preprocess_market_data(data.marketData)
-    data_per_month = preprocess_datas.create_subset_dataframes()
+    preprocess_data = pmd.Preprocess_market_data(data.marketData)
+    data_per_month = preprocess_data.create_subset_dataframes()
     for month,data in data_per_month.items():
         pattern_detection = Pattern_detection(data)
         pattern_detection.plot_trendline()

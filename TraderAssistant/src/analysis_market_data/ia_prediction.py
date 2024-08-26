@@ -77,12 +77,11 @@ class IA_Prediction:
         return None
     
     def ia_trend_forecasting(self,model,nbr_days_to_forecast=7):
-        last_day_before_forecast = dp.index[-1]
+        last_day_before_forecast = self.dp.index[-1]
         days_to_forecast = pd.date_range(start=last_day_before_forecast,periods=8,freq='D')[1:]
-        X_fore = dp.out_of_sample(nbr_days_to_forecast)
+        X_fore = self.dp.out_of_sample(nbr_days_to_forecast)
         X_fore.index = days_to_forecast
         y_forecast = pd.Series(model.predict(X_fore)[:,0],index=X_fore.index)
-        print(y_forecast)
         return y_forecast
     
     def plot_trend_forecasting(self,y_prediction_train,y_prediction_test,y_forecast):

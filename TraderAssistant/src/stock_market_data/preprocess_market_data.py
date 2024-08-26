@@ -21,7 +21,6 @@ class Preprocess_market_data:
         self.marketData = marketData
         # convert the date in the dataframe into datetime format
         self.convert_date_in_datetime()
-        self.drop_useless_column()
         if flagPlot:
             self.plot_marketData()
             self.plot_moving_average_market_data()
@@ -48,7 +47,7 @@ class Preprocess_market_data:
         # Create a dictionary to hold each month's DataFrame
         monthly_dfs = {}
         # Group by year and month
-        grouped = self.market.marketData.groupby([self.market.marketData.index.year, self.market.marketData.index.month])
+        grouped = self.marketData.groupby([self.marketData.index.year, self.marketData.index.month])
         # Iterate over the grouped object and create a DataFrame for each month
         for (year, month), group in grouped:
             monthly_dfs[f'{year}-{month:02d}'] = group
@@ -104,6 +103,7 @@ class Preprocess_market_data:
         return dp
     
     def create_features_in_sample(self):
+        self.drop_useless_column()
         Y = self.marketData.copy()
         X = self.dp.in_sample()
         return X,Y
